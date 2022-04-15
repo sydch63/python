@@ -4,13 +4,6 @@
 # К каждому элементу списка добавить 17 и заново вычислить сумму тех чисел из этого списка, сумма цифр которых делится нацело на 7.
 # * Решить задачу под пунктом b, не создавая новый список.
 
-tz = 0
-number_1 = tz % 10
-tz = tz // 10
-number_2 = tz % 10
-tz = tz // 10
-
-
 number_range = range(1,1001)
 list_cubed = []
 list_divided_7 = []
@@ -33,6 +26,7 @@ for number in list_cubed:
 for number in list_divided_7:
     sum_number_divided_7 += number
 print("Сумма цифр деленных на 7:", sum_number_divided_7)
+list_divided_7.clear()
 for number in list_cubed:
     number += 17
     sum_number = 0
@@ -45,5 +39,7 @@ for number in list_cubed:
             sum_number += number
     if sum_number % 7 == 0 and sum_number != 0:
         list_divided_7.append(number_finally)
-    sum_number_divided_7 += number
+        sum_number_divided_7 = 0
+for number in list_divided_7:
+        sum_number_divided_7 += number
 print("Сумма цифр деленных на 7:", sum_number_divided_7)
