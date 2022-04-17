@@ -1,5 +1,5 @@
 #duration = int(input("Введите продолжительность времени: "))
-duration = 78
+duration = 400153
 second = 1
 minutes = 60
 hours = 3600
