@@ -1,12 +1,12 @@
 test1 = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+5', 'градусов']
 test2 = ['примерно в', '23', 'часа', '8', 'минут', '03', 'секунд', 'температура', 'воздуха', 'была', '-5', 'градусов Цельсия', 'темп', 'воды', '+12', 'градусов', 'Цельсия']
 test3 = ['+9', 'примерно в', '23', 'часа', '8', 'минут', '03', '05', 'секунд', 'температура', 'воздуха', 'была', '5', 'градусов Цельсия', 'темп','воды','+2.0','градусов','Цельсия' ,'-2', '11']
-lst1 = test2
+lst1 = test3
 quotation_mark = '"'
 new_lst1 = []
 finally_str = ''
 for data in lst1:
-    if data.isdigit() == True or data.startswith("+") or data.startswith("-"):
+    if data.isdigit() == True or (data.startswith("+") and '.' not in data or data.startswith("-") and '.' not in data):
         if len(data) == 1:
             data_replace = data.replace(data, "0" + data)
             new_lst1.append(quotation_mark)
@@ -22,7 +22,7 @@ for data in lst1:
                 new_lst1.append(quotation_mark)
                 new_lst1.append(data)
                 new_lst1.append(quotation_mark)
-        elif data.startswith("-"):
+        elif data.startswith("-") :
             if len(data) == 2:
                 data_replace = data.replace("-", "-0")
                 new_lst1.append(quotation_mark)
@@ -53,7 +53,7 @@ for index,element in enumerate(new_lst1):
             finally_str += element + ''
         else:
             finally_str += element + ' '
-    elif element.isdigit() == True or element.startswith("+") or element.startswith("-"):
+    elif element.isdigit() == True or (element.startswith("+") and '.' not in element or element.startswith("-") and '.' not in element):
         finally_str += element + ''
     else:
         finally_str += element + ' '
