@@ -8,7 +8,6 @@ def num_translate(word):
     else:
         return dct_eng_rus.get(word)
 
-
 num_translate("one")
 num_translate("5")
 num_translate("eleven")
