@@ -2,7 +2,11 @@ dct_eng_rus = {"one":"один","two":"два","three":"три","four":"четы
 
 def num_translate(word):
     word = word.lower()
-    return print(dct_eng_rus.get(word))
+    dct_eng_rus.get(word)
+    if word in dct_eng_rus.keys():
+        return dct_eng_rus.get(word)
+    else:
+        return dct_eng_rus.get(word)
 
 
 num_translate("one")

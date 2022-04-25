@@ -10,6 +10,6 @@ def thesaurus(*names):
             dct_name[word].append(name)
     for key in sorted(dct_name.keys()):
         sort_dct_name[key] = dct_name[key]
-    return print(sort_dct_name)
+    return sort_dct_name
 
 thesaurus("Иван", "Мария", "Петр", "Илья", "Артем", "Вадим", "Анатолий","Павел","Яков","Федор","Кирилл","Макс","Евгений")

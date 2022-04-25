@@ -3,10 +3,10 @@ dct_eng_rus = {"one":"один","two":"два","three":"три","four":"четы
 def num_translate_adv(word):
     if word.istitle() is True:
         word = word.lower()
-        return print(dct_eng_rus.get(word).capitalize())
+        return dct_eng_rus.get(word).capitalize()
     else:
         word = word.lower()
-        return print(dct_eng_rus.get(word))
+        return dct_eng_rus.get(word)
 
 
 num_translate_adv("One")

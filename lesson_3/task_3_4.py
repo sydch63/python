@@ -34,6 +34,6 @@ def thesaurus_adv(*names):
             else:
                 sort_dct_name[key_surname] = {}
                 sort_dct_name[key_surname][key_name] = dct_surname[key_surname][key_name]
-    return print(sort_dct_name)
+    return sort_dct_name
 
 thesaurus_adv("Иван Сергеев", "Алла Сидорова", "Инна Серова", "Петр Алексеев", "Илья Иванов", "Анна Савельева", "Василий Суриков")
