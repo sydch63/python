@@ -14,3 +14,6 @@ num_translate_adv("5")
 num_translate_adv("eleven")
 num_translate_adv("Five")
 num_translate_adv("six")
+
+#не очень понял из ТЗ, как требуется показать None, имелось ввиду показать что функция не может перевести и показать type = None?
+#или достаточно , что она вернет None "скрытно" как у меня сейчас
