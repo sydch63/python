@@ -1,5 +1,3 @@
-# 5. Реализовать функцию get_jokes(), возвращающую n шуток, сформированных из трех случайных слов, взятых из трёх заданных списков.
-# Условие задачи
 import random
 
 nouns = ["автомобиль", "лес", "огонь", "город", "дом"]
@@ -8,11 +6,12 @@ adjectives = ["веселый", "яркий", "зеленый", "утопичн�
 
 def get_jokes(number_of_jokes,nouns,adverbs,adjectives):
     jokes = []
+    '''Цикл , с помощью random.choice, выбираем рандомные слова из заданных списков и добавляеем их в конечный список'''
     while number_of_jokes != 0:
         word_nouns = random.choice(nouns)
         word_adverbs = random.choice(adverbs)
         word_adjectives = random.choice(adjectives)
-        jokes_str = word_nouns+ ' ' +word_adverbs+ ' ' +word_adjectives
+        jokes_str = f"{word_nouns} {word_adverbs} {word_adjectives}"
         jokes.append(jokes_str)
         number_of_jokes -= 1
     return jokes
