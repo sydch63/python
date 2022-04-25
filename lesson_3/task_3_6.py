@@ -8,7 +8,6 @@ def get_jokes(number_of_jokes,nouns=nouns,adverbs=adverbs,adjectives=adjectives,
     jokes = []
     '''Проверяем на количество шуток вкупе с уникальностью, с помощью random.sample создаем только уникальные списки из изначальных'''
     if number_of_jokes > 5 and uniq == True:
-        print ("Количество уникальных шуток, может быть только 5")
         number_of_jokes = 5
         lst_nouns = random.sample(nouns, number_of_jokes)
         lst_adverbs = random.sample(adverbs, number_of_jokes)
