@@ -8,9 +8,7 @@ groups = [
 
 def students_and_classes(tutors,groups):
     for idx,stud in enumerate(tutors):
-        if idx == len(tutors):
-            return stud(groups[idx])
-        elif len(groups) > idx:
+        if len(groups) > idx:
             yield stud,groups[idx]
         else:
             yield stud,None
