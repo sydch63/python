@@ -1,4 +1,6 @@
+import os
 import os.path
+import shutil
 
 try:
     path_conf = os.path.join('.','config_2.yaml')
@@ -9,7 +11,7 @@ try:
 
     for line in f:
         lst_conf.append(line)
-
+    f.close()
 
 
     for el in lst_conf:
@@ -38,7 +40,11 @@ try:
             file_sec_path = os.path.abspath(file_sec_path)
             with open(file_sec_path, 'w') as f:
                 pass
-    f.close()
+    path_in_myproject = [os.path.join(main_path,item) for item in os.listdir(main_path)]
+    for path in path_in_myproject:
+        for root,dirs,files in os.walk(path):
+            if 'templates' in dirs:
+                shutil.copytree(os.path.join(path,'templates'),os.path.join(main_path,'templates'),dirs_exist_ok=True)
 except (FileNotFoundError,EOFError) as e:
     print(f'concrete error: {e}')
 
