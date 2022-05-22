@@ -16,3 +16,4 @@ for root,dirs,files in os.walk(main_path):
                 dct_size_files[size] += 1
                 break
 
+print(dct_size_files)
