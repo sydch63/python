@@ -6,7 +6,7 @@ def parsed_raw(raw_str):
             str_file = f.read()
             parse_ip = re.findall("(\d{1,3}\.\d{1,3}\.+\d{1,3}\.\d{1,3})\s",str_file)
             print(f"Длина списка всех IP-адресов: {len(parse_ip)}")
-        parse_str = re.findall( "(^\d+\.\d+\.+\d+\.\d+).+\[(\d+\/\w+\/\d+:\d+:\d+:\d+.+)\].+\"(\w+).(\/\w+\/\w+)\s\S+.(\d+).(\d+)", raw_str)
+        parse_str = re.findall( "(\d{1,3}\.\d{1,3}\.+\d{1,3}\.\d{1,3}).+\[(\d+\/\w+\/\d+:\d+:\d+:\d+.+)\].+\"(\w+).(\/\w+\/\w+)\s\S+.(\d+).(\d+)", raw_str)
         if parse_str != []:
             return parse_str[0]
     except ValueError as exc:
@@ -15,3 +15,5 @@ def parsed_raw(raw_str):
         raise ValueError((f"wrong str: {raw_str}"))  from exc
 
 print(parsed_raw('144.92.16.161 - - [17/May/2015:12:05:32 +0000] "GET /downloads/product_1 HTTP/1.1" 404 324 "-" "Debian APT-HTTP/1.3 (0.8.16~exp12ubuntu10.21)"'))
+
+
