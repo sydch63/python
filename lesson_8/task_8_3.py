@@ -1,11 +1,11 @@
 def type_logger(func):
-    if func.__name__ == 'calc_cube':print(f'Call for: {func.__name__}')
     def wrapper(*args, **kwargs):
+        if func.__name__ == 'calc_cube': print(f'Call for: {func.__name__}')
+        if func.__name__ == 'render_input': print(f'Call for: {func.__name__}')
         result = func(*args, **kwargs)
         print(f'{args[0]}: {type(args[0])}')
         lst = []
         if func.__name__ == 'render_input':
-            print(f'Call for: {func.__name__}')
             for key in kwargs.keys():
                 lst.append(f'{key} = {kwargs[key]}: {type(kwargs[key])}')
             print(','.join(lst))
