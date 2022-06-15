@@ -43,7 +43,7 @@ m2 = Matrix([[1,1,1],[1,1,1],[1,1,1]])
 print(m1)
 print(m2)
 m3 = m1 + m2
-print(m3)
+print(f'После сложения новая матрица:\n{m3}')
 print(type(m3))
 
 print()
@@ -54,6 +54,6 @@ m2 = Matrix([[1,1],[1,1],[1,1]])
 print(m1)
 print(m2)
 m3 = m1 + m2
-print(m3)
+print(f'После сложения новая матрица:\n{m3}')
 print(type(m3))
 
