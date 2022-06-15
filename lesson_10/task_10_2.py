@@ -36,7 +36,7 @@ class Coat(Clothes):
 
     def cloth_require(self):
         self.coat_value_cloth = round(self.param/6.5 + 0.5,2)
-        return f'Для пошива {self.name} нужно {self.coat_value_cloth} ткани'
+        return f'Для пошива "{self.name}" нужно {self.coat_value_cloth} ткани'
 
     def add_to_reserve(self):
         try:
@@ -53,7 +53,7 @@ class Suit(Clothes):
 
     def cloth_require(self):
         self.suit_value_cloth = round(self.param*2 + 0.3,2)
-        return f'Для пошива {self.name} нужно {self.suit_value_cloth} ткани'
+        return f'Для пошива "{self.name}" нужно {self.suit_value_cloth} ткани'
 
     def add_to_reserve(self):
         try:
@@ -72,6 +72,10 @@ c2 = Coat("Зеленое пальто",8)
 print(c2.cloth_require())
 c2.add_to_reserve()
 print(f'Общее кол-во ткани для пальто: {c2.cloth_summary}')
+c3 = Coat("Зеленое пальто",5)
+print(c3.cloth_require())
+c3.add_to_reserve()
+print(f'Общее кол-во ткани для пальто: {c2.cloth_summary}')
 print()
 
 s1 = Suit("Черный костюм",12)
@@ -82,3 +86,7 @@ s2 = Suit("Белый костюм",8)
 print(s2.cloth_require())
 s2.add_to_reserve()
 print(f'Общее кол-во ткани для костюмов: {s1.cloth_summary}')
+s3 = Suit("Синий костюм",3)
+print(s3.cloth_require())
+s3.add_to_reserve()
+print(f'Общее кол-во ткани для костюмов: {s3.cloth_summary}')
